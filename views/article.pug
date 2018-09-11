@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1.mt-40 #{title}
+  hr
+
+  if user
+    if user._id == article.author
+      a.btn.btn-primary(href='/articles/edit/'+article._id) Edit article
+      a.btn.btn-danger.delete-article(href='#' data-id=article._id) Delete
+
+  .article-wrapper
+    h2=article.title
+    h6 written by: #{author}
+    p=article.body

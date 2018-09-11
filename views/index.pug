@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1.mt-40 This is my blog
+  br
+
+  each article in articles
+    .post
+      h3
+        a(href="/articles/"+ article._id )= article.title
+      p= article.body

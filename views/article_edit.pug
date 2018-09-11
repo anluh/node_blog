@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1.mt-40 Edit article
+    hr
+    br
+
+  form(action='/articles/edit/' + article._id method='post')
+    #form-group
+      label Title:
+      input.form-control(type='text' name='title' value=article.title)
+    br
+    #form-group
+      label Author:
+      input.form-control(type='text' name='author' value=article.author)
+    br
+    #form-group
+      label Body:
+      textarea.form-control(name='body' rows='10' cols='30')=article.body
+    br
+    button.btn.btn-primary Send

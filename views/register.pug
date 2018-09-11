@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1.mt-40 REGISTER
+  hr
+  br
+
+  form(action='/users/register' method='post')
+    #form-group
+      label Name:
+      input.form-control(type='text' name='name')
+    br
+    #form-group
+      label Email:
+      input.form-control(type='email' name='email')
+    br
+    #form-group
+      label Username:
+      input.form-control(type='text' name='username')
+    br
+    #form-group
+      label Password:
+      input.form-control(type='password' name='password')
+    br
+    #form-group
+      label Check Password:
+      input.form-control(type='password' name='password2')
+
+    button.btn.btn-primary.mt-20 Register

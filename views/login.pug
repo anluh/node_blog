@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1.mt-40 Login
+  hr
+  br
+
+  form(action='/users/login' method='post')
+    #form-group
+      label Username:
+      input.form-control(type='text' name='username')
+    br
+    #form-group
+      label Password:
+      input.form-control(type='password' name='password')
+    br
+    button.btn.btn-primary.mt-20 Register

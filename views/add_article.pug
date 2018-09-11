@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1.mt-40 Add new post
+  hr
+  br
+
+  form(action='/articles/add' method='post')
+    #form-group
+      label Title:
+      input.form-control(type='text' name='title')
+    br
+    #form-group
+      label Body:
+      textarea.form-control(name='body' rows='10' cols='30')
+    //br
+    //.input-group
+    //  .custom-file
+    //    input#article-picture.custom-file-input(type='file')
+    //    label.custom-file-label(for='article-picture') Choose file
+    //  .input-group-append
+    //    button.btn.btn-outline-secondary.article-picture-btn(type='button') Button
+    br
+    button.btn.btn-primary Send
+
+
