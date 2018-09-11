@@ -1,5 +1,5 @@
 # Blog | Node.js + Mongodb
-Personal page with authorisation
+Personal blog with authorisation
 
 ## Get Started 
 * This project use [mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/) database. Needs to be installed globally.
