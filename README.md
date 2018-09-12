@@ -12,6 +12,10 @@ npm install
 ```
 npm install -g nodemon
 ```
+* Install bootstrap and jQuery
+```
+bower install bootstrap jquery
+```
 
 ## Usage
 
