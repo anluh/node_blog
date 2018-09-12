@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebb68ce7-176e-49ec-bec9-2da353784180" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +27,7 @@
           <entry key="gitignore" value="18" />
           <entry key="js" value="7730" />
           <entry key="json" value="29" />
-          <entry key="md" value="465" />
+          <entry key="md" value="539" />
           <entry key="pug" value="2371" />
           <entry key="styl" value="887" />
           <entry key="www" value="133" />
@@ -37,7 +38,7 @@
           <entry key="JSON" value="68" />
           <entry key="Jade" value="2371" />
           <entry key="JavaScript" value="7863" />
-          <entry key="Markdown" value="465" />
+          <entry key="Markdown" value="539" />
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="Stylus" value="887" />
         </counts>
@@ -49,7 +50,7 @@
           <entry key="gitignore" value="1" />
           <entry key="js" value="49" />
           <entry key="json" value="4" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="pug" value="50" />
           <entry key="sh" value="1" />
           <entry key="styl" value="9" />
@@ -62,7 +63,7 @@
           <entry key="JSON" value="6" />
           <entry key="Jade" value="50" />
           <entry key="JavaScript" value="57" />
-          <entry key="Markdown" value="1" />
+          <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Stylus" value="9" />
         </counts>
@@ -145,15 +146,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/passport.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
@@ -161,6 +153,18 @@
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="570">
+                <caret line="27" column="155" lean-forward="true" selection-start-line="27" selection-start-column="155" selection-end-line="27" selection-end-column="155" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -227,13 +231,13 @@
         <option value="$PROJECT_DIR$/views/index.pug" />
         <option value="$PROJECT_DIR$/views/article.pug" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/routes/articles.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/layout.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.styl" />
         <option value="$PROJECT_DIR$/views/tests.pug" />
         <option value="$PROJECT_DIR$/config/database.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -348,12 +352,12 @@
       <workItem from="1536051192568" duration="52000" />
       <workItem from="1536214605191" duration="12900000" />
       <workItem from="1536237754940" duration="7000" />
-      <workItem from="1536561173708" duration="40865000" />
+      <workItem from="1536561173708" duration="41442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97951000" />
+    <option name="totallyTimeSpent" value="98528000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,16 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="23">
-            <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -610,6 +604,16 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="570">
+            <caret line="27" column="155" lean-forward="true" selection-start-line="27" selection-start-column="155" selection-end-line="27" selection-end-column="155" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
