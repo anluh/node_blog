@@ -63,7 +63,6 @@ router.post("/edit/:id", ensureAuthenticated, (req, res)=>{
   let id = req.params.id;
   let article = {};
   article.title = req.body.title;
-  article.author = req.body.author;
   article.body = req.body.body;
 
   console.log(req.params);
