@@ -1,5 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+
+var bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
+
 
 let Article = require('../models/article');
 let User = require('../models/user');
@@ -7,13 +12,69 @@ let User = require('../models/user');
 
 /* GET add a new post page. */
 router.get("/add", ensureAuthenticated, (req, res)=> {
-  res.render('add_article')
+  res.render('add_article', {
+    title: "Add Article"
+  })
 });
 
-router.post("/add", (req, res)=>{
+// Init multer
+
+const multer = require('multer');
+
+// Set Storage Engine
+const storage = multer.diskStorage({
+  destination: './public/images/articles',
+  filename: function(req, file, cb){
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
+
+// Init Upload
+const upload = multer({
+  storage: storage,
+  limits: {fileSize: 1000000},
+  fileFilter: function(req, file, cb){
+    checkFileType(file, cb)
+  }
+}).single('image');
+
+// Check File Type
+
+function checkFileType(file, cb){
+  // Allowed ext
+  const filetypes = /jpeg|jpg|png|gif/;
+  // check ext
+  const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+  // Check mime
+  const mimetype = filetypes.test(file.mimetype);
+
+  if(mimetype && extname){
+    return cb(null, true);
+  } else {
+    cb('Error: Images Only!');
+  }
+
+}
+
+router.post("/add", jsonParser, (req, res, next) =>{
+  upload(req, res, (err) => {
+    if(err){
+      req.flash('danger', err);
+      res.render('add_article', {
+        title: "Add Article"
+      })
+    } else {
+      next();
+    }
+  })
+}, (req, res)=>{
   req.checkBody('title','Title is required').notEmpty();
-  //req.checkBody('author','Author is required').notEmpty();
   req.checkBody('body','Body is required').notEmpty();
+
+  let article = new Article();
+  article.title = req.body.title;
+  article.author = req.user._id;
+  article.body = req.body.body;
 
   // Get Errors
 
@@ -22,14 +83,18 @@ router.post("/add", (req, res)=>{
   if(errors){
     res.render('add_article', {
       title: 'Add Article',
-      errors: errors
+      errors: errors,
+      article: article
     })
   } else {
 
-    let article = new Article();
-    article.title = req.body.title;
-    article.author = req.user._id;
-    article.body = req.body.body;
+    if(req.file) {
+      article.image = req.file.filename;
+    } else {
+      article.image = '';
+    }
+
+    console.log(path);
 
     article.save((err) => {
       if (err) {
@@ -40,6 +105,7 @@ router.post("/add", (req, res)=>{
         res.redirect('/');
       }
     });
+
 
   }
 

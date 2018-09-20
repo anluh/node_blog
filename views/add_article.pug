@@ -1,26 +1,36 @@
 extends layout
 
 block content
-  h1.mt-40 Add new post
+  h1.mt-40=title
   hr
   br
 
-  form(action='/articles/add' method='post')
+
+
+  form(action='/articles/add' method='post' enctype="multipart/form-data")
     #form-group
       label Title:
-      input.form-control(type='text' name='title')
+      if article
+        input.form-control(type='text' name='title' value=article.title)
+      else
+        input.form-control(type='text' name='title')
     br
     #form-group
       label Body:
-      textarea.form-control(name='body' rows='10' cols='30')
-    //br
-    //.input-group
-    //  .custom-file
-    //    input#article-picture.custom-file-input(type='file')
-    //    label.custom-file-label(for='article-picture') Choose file
-    //  .input-group-append
-    //    button.btn.btn-outline-secondary.article-picture-btn(type='button') Button
+      if article
+        textarea.form-control(name='body' rows='10' cols='30')=article.body
+      else
+        textarea.form-control(name='body' rows='10' cols='30')
+    br
+    #form-group
+      .input-group
+        .custom-file
+          input#article-picture.custom-file-input(type='file' name='image')
+          label.custom-file-label(for='article-picture') Choose file
     br
     button.btn.btn-primary Send
+
+  br
+  br
 
 

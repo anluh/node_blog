@@ -6,5 +6,17 @@ block content
     br
     hr
 
+  != typeof msg !== 'undefined' ? msg : ''
+
+  form(action='/upload' method='post' enctype='multipart/form-data')
+    .input-group
+      .custom-file
+        input#article-picture.custom-file-input(type='file' name='image')
+        label.custom-file-label(for='article-picture') Choose file
+
+    br
+    buttom.btn.btn-primary.mt-20 Submit
+
+
 
 

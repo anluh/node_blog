@@ -12,6 +12,7 @@ body {
   margin-top: 20px;
 }
 .post {
+  align-items: center;
   padding: 40px 30px 20px;
   margin-top: 20px;
   border-top: 1px solid #333;
@@ -65,4 +66,7 @@ body {
 }
 .user-logged {
   color: #fff;
+}
+.responsive-img {
+  width: 100%;
 }

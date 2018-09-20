@@ -25,6 +25,13 @@ router.get('/tests', function(req, res) {
     res.render('tests', { title: 'Tests'});
 });
 
+
+
+router.post('/upload', (req, res) => {
+  console.log('bla');
+  res.send('test');
+});
+
 // =====================  Emmit =======================
 
 

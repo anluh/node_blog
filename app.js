@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var stylus = require('stylus');
 var bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
